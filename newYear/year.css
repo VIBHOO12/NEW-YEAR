@@ -1,0 +1,54 @@
+body{
+   margin: 0;
+   padding: 0;
+   background: #000;
+   display: flex;
+   justify-content: center;
+   height: 90vh;
+   position: relative;
+   background-image: url("images.jpg");
+   background-position: center;
+    background-size: cover;
+
+
+}
+h1 {
+    color: #fff;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.sparkle > .before {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 25%;
+    border-radius: 50%;
+    animation: 1s bang ease-out infinite backwards, 1s gavity ease-in infinite backwards,5s position linear backwards;
+    box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+
+}
+.sparkle > .after {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    right: 25%;
+    border-radius: 50%;
+    animation: 1s bang ease-out infinite backwards, 1s gavity ease-in infinite backwards,5s position linear backwards;
+    box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+}
+.sparkle > .after {
+    animation-delay: 1.25s,1.25s,1.25s ;
+    animation-duration: 1.25s,1.25s,6.25s ;
+}
+@keyframes bang {
+    to {
+        box-shadow: 101px -241.6666666667px #00ff55, -10px -3.6666666667px #ff005e,89px -357.666667px #b300ff, -89px --309.666667px;
+    }
+}
+@keyframes gravity {
+    to {
+        transform: translateY(100PX);
+        opacity: 0;
+    }
+}
